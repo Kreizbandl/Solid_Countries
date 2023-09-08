@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <Title>SolidCountries</Title>
-      <h1>Hello world!</h1>
+      <h1>About</h1>
       <Counter />
       {/* <p>
         Visit{" "}
