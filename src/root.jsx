@@ -12,29 +12,34 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import Navbar from "~/components/Navbar";
 import "./root.css";
 export default function Root() {
   return (
     <Html lang="en">
       <Head>
-        {/* ?? which title? */}
-        <Title>SolidStart - Bare</Title>
+        {/* if set valid for all routes */}
+        <Title>SolidCountries</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Body>
         <Suspense>
           <ErrorBoundary>
-            {/* loads index */}
-            <A href="/">Index</A>
+
+            <Navbar/>
+
             {/* loads component according to folder structur */}
-            <A href="/about/about">About</A>
+            {/* <A href="/">Index</A>
+            <A href="/about">About</A> */}
+
+            {/* loads corresponding components */}
             <Routes>
               <FileRoutes />
             </Routes>
+
           </ErrorBoundary>
         </Suspense>
-        {/* loads all components? */}
         <Scripts />
       </Body>
     </Html>
