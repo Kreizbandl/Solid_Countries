@@ -3,7 +3,7 @@ import { createSignal } from "solid-js";
 import "./Navbar.css";
 export default function Navbar() {
 
-    const [searchValue, setSearchValue] = createSignal(""); // Hier wird der Wert des Input-Felds gespeichert
+    const [searchValue, setSearchValue] = createSignal("");
 
     return (
         <nav class="navbar">
@@ -15,7 +15,7 @@ export default function Navbar() {
                 <li>
                     <label for="search">Search: </label>
                     <input type="text" id="search" name="search" value={searchValue()} onInput={(e) => setSearchValue(e.target.value)}/>
-                    <A href={`/all-countries/${encodeURIComponent(searchValue())}`}>Search wip</A>
+                    <A href={`/all-countries/${encodeURIComponent(searchValue())}`}>Search</A>
                 </li>
                 <li>
                     <A href="/all-countries">All Countries</A>
