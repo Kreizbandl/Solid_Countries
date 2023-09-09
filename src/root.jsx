@@ -16,6 +16,7 @@ import { Route } from "@solidjs/router";
 import Navbar from "~/components/Navbar";
 import CountryDetail from "./routes/country-detail/[country]";
 import "./root.css";
+import Search from "./routes/all-countries/[[search]]";
 export default function Root() {
   return (
     <Html lang="en">
@@ -34,6 +35,7 @@ export default function Root() {
             {/* loads corresponding components */}
             <Routes>
               <Route path="/country-detail/:country" component={CountryDetail} />
+              <Route path="/all-countries/:search?" component={Search} />
               <FileRoutes />
             </Routes>
 
