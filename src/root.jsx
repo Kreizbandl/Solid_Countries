@@ -12,7 +12,9 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import { Route } from "@solidjs/router";
 import Navbar from "~/components/Navbar";
+import CountryDetail from "./routes/country-detail/[country]";
 import "./root.css";
 export default function Root() {
   return (
@@ -31,6 +33,7 @@ export default function Root() {
 
             {/* loads corresponding components */}
             <Routes>
+              <Route path="/country-detail/:country" component={CountryDetail} />
               <FileRoutes />
             </Routes>
 
