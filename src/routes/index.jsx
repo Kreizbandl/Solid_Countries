@@ -1,8 +1,8 @@
 export default function Home() {
   return (
     <main>
-      <h1>Welcome</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore iusto quis laboriosam nobis tempore molestiae, veritatis qui, cum optio inventore distinctio ipsum minima laborum maxime aut eligendi, perspiciatis rerum cumque.</p>
+      <h1>Welcome to Countries!</h1>
+      <p>Welcome to the "Countries" website! Here you can find information about all countries of the world. This application is used to illustrate accessibility on the Internet. If you have any problems or suggestions regarding this website, just let us know your concerns under "Contact".</p>
     </main>
   );
 }

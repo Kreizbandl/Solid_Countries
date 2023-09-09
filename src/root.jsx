@@ -29,10 +29,6 @@ export default function Root() {
 
             <Navbar/>
 
-            {/* loads component according to folder structur */}
-            {/* <A href="/">Index</A>
-            <A href="/about">About</A> */}
-
             {/* loads corresponding components */}
             <Routes>
               <FileRoutes />
