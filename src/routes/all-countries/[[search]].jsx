@@ -5,34 +5,40 @@ import { A } from "@solidjs/router"
 
 export default function Search() {
 
-    const params = useParams();
-    const [countriesToDisplay, setCountriesToDisplay] = createSignal();
+    const params = useParams()
+    const [countriesToDisplay, setCountriesToDisplay] = createSignal()
+    const [heading, setHeading] = createSignal()
+    setHeading('All Countries')
     
     //sort countries
     const sortedJsonCountries = jsonCountries.sort((a,b) => {
-        return a.name.common.localeCompare(b.name.common);
+        return a.name.common.localeCompare(b.name.common)
     })
 
     createEffect(() => {
-      let filteredCountries = sortedJsonCountries;
-
+      let filteredCountries = sortedJsonCountries
+      setHeading('All Countries')
       if(params.search){
+        setHeading('Found countries for ' + params.search)
         filteredCountries = filteredCountries.filter(country => {
           return country.name.common.includes(params.search)
         });
       }
+      if(filteredCountries.length === 0){
+        setHeading('Nothing found for ' + params.search)
+      }
 
-      setCountriesToDisplay(filteredCountries);
+      setCountriesToDisplay(filteredCountries)
 
-      console.log(countriesToDisplay);
+      console.log(countriesToDisplay)
 
-      onCleanup(() => {});
-    });
+      onCleanup(() => {})
+    })
 
 
     return (
       <main>
-        <h1>CountriesList</h1>
+        <h1>{ heading }</h1>
         <div class="country-cards">
             
             <For each={countriesToDisplay()}>{(country,i) =>
