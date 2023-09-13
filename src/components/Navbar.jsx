@@ -34,13 +34,13 @@ export default function Navbar() {
                             }
                           }}
                     />
-                    <A href={`/`} onClick={navigateToSearch}>Search</A>
+                    <A href={`/`} onClick={navigateToSearch} aria-label="Search for Countries">Search</A>
                 </li>
                 <li>
-                    <A href="/all-countries">All Countries</A>
+                    <A href="/all-countries" aria-label="Go to all countries screen">All Countries</A>
                 </li>
                 <li>
-                    <A href="/contact">Contact</A>
+                    <A href="/contact" aria-label="Go to the contact form">Contact</A>
                 </li>
             </ul>
         </nav>

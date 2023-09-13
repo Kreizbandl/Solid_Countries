@@ -36,7 +36,7 @@ export default function Search() {
         <div class="country-cards">
             
             <For each={countriesToDisplay()}>{(country,i) =>
-                <A href={`/country-detail/${encodeURIComponent(country.name.common)}`} class="card">
+                <A href={`/country-detail/${encodeURIComponent(country.name.common)}`} class="card" aria-label={`Got to detail screen of ${ country.name.common }`}>
                     <h2>{ country.name.common }</h2>
                     <img alt={ country.flags.alt || 'Flag of country ' + country.name.common } src={ country.flags.png }></img>
                 </A>
