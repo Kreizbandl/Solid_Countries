@@ -21,7 +21,6 @@ export default function Root() {
   return (
     <Html lang="en">
       <Head>
-        {/* if set valid for all routes */}
         <Title>SolidCountries</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,16 +28,17 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
-
+            {/* Navigationsmenü */}
             <Navbar/>
-
-            {/* loads corresponding components */}
+            {/* Dynamische Einbindung der Seiten */}
             <Routes>
+              {/* Detailansicht für ein bestimmtes Land */}
               <Route path="/country-detail/:country" component={CountryDetail} />
+              {/* Seite mit allen Ländern und optoinalem Suchbegriff */}
               <Route path="/all-countries/:search?" component={Search} />
+              {/* Datei-Routen */}
               <FileRoutes />
             </Routes>
-
           </ErrorBoundary>
         </Suspense>
         <Scripts />
