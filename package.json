@@ -8,6 +8,9 @@
   "type": "module",
   "devDependencies": {
     "esbuild": "^0.14.54",
+    "eslint": "^8.49.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-solid": "^0.13.0",
     "postcss": "^8.4.28",
     "solid-start-node": "^0.3.5",
     "vite": "^4.4.9"
