@@ -22,7 +22,7 @@ export default function Contact() {
                     <textarea type="text" id="message" name="message" aria-label="Enter a message"></textarea>
                 </div>
                 {/* Button zum Absenden des Formulars mit beschreibendem Label */}
-                <button type="submit" aria-label="Submit">Submit</button>
+                <button type="submit" id="submit" aria-label="Submit">Submit</button>
 
             </form>
         </div>

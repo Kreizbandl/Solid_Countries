@@ -29,7 +29,7 @@ export default function Navbar() {
                         onKeyPress={(e) => { if (e.key === "Enter") { navigateToSearch(); } }}
                     />
                     {/* Link zum Auslösen der Suche mit beschreibendem Label */}
-                    <A href={`/`} onClick={navigateToSearch} aria-label="Search for Countries">Search</A>
+                    <A href={`/`} id="search-button" onClick={navigateToSearch} aria-label="Search for Countries">Search</A>
                 </li>
                 <li>
                     {/* Link zur Liste alle Länder mit beschreibendem Label */}
