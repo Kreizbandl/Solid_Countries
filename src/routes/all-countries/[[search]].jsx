@@ -28,7 +28,7 @@ export default function Search() {
     setHeading('All Countries')
     /* Zeigt nur die entsprechenden Länder, wenn ein Suchbegriff vorhanden */
     if (params.search) {
-      setHeading('Found countries for ' + params.search)
+      setHeading('Found countries for "' + params.search + '"')
       /* Verwendet nur passende Länder */
       filteredCountries = filteredCountries.filter(country => {
         return country.name.common.includes(params.search)
@@ -36,7 +36,7 @@ export default function Search() {
     }
     /* Zeigt Fehlermeldung, wenn keine Länder gefunden wurden */
     if (filteredCountries.length === 0) {
-      setHeading('Nothing found for ' + params.search)
+      setHeading('Nothing found for "' + params.search + '"')
     }
 
     setCountriesToDisplay(filteredCountries)

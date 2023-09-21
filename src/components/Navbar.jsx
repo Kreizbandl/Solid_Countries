@@ -29,15 +29,15 @@ export default function Navbar() {
                         onKeyPress={(e) => { if (e.key === "Enter") { navigateToSearch(); } }}
                     />
                     {/* Link zum Auslösen der Suche mit beschreibendem Label */}
-                    <A href={`/`} id="search-button" onClick={navigateToSearch} aria-label="Search for Countries">Search</A>
+                    <button type="button" id="search-button" onClick={navigateToSearch} onKeyPress={(e) => { if (e.key === "Enter") { navigateToSearch(); } }} aria-label="Search for Countries" >Search</button>
                 </li>
                 <li>
                     {/* Link zur Liste alle Länder mit beschreibendem Label */}
-                    <A href="/all-countries" aria-label="Go to all countries screen">All Countries</A>
+                    <A href="/all-countries" class="nav-link" activeClass="active-link" end aria-label="Go to all countries screen">All Countries</A>
                 </li>
                 <li>
                     {/* Link zum Kontaktformular mit beschreibendem Label */}
-                    <A href="/contact" aria-label="Go to the contact form">Contact</A>
+                    <A href="/contact" class="nav-link" activeClass="active-link" aria-label="Go to the contact form">Contact</A>
                 </li>
             </ul>
         </nav>
