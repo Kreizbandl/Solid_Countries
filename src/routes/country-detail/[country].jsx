@@ -3,22 +3,25 @@ import jsonCountries from '../../countries.json';
 
 export default function CountryDetail() {
 
-    const params = useParams();
+  const params = useParams();
 
-    /* Suche der Länder mittels Suchbegriff */
-    const country = jsonCountries.find(
-      country => country.name.common === decodeURIComponent(params.country));
+  /* Suche der Länder mittels Suchbegriff */
+  const country = jsonCountries.find(country => country.name.common === decodeURIComponent(params.country));
+  jsonCountries.forEach(country => {
+    if (!country.flags.alt) {
+      country.flags.alt = 'Flag of country "' + country.name.common + '"';
+    }
+  });
 
-    return (
-      <main>
-        <div class="country-detail">
-            {/* Informationen eines Landes mit Bild mit alternativem Text */}
-            <h1>{ country.name.common }</h1>
-            <img alt={ country.flags.alt || 'Flag of country ' + country.name.common } 
-              src={ country.flags.png }></img>
-            <p>Population: { country.population }</p>
-        </div>
-      </main>
-    );
-  }
-  
+  return (
+    <main>
+      <div class="country-detail">
+        {/* Informationen eines Landes mit Bild mit alternativem Text */}
+        <h1>{country.name.common}</h1>
+        <img alt={country.flags.alt}
+          src={country.flags.png}></img>
+        <p>Population: {country.population}</p>
+      </div>
+    </main>
+  );
+}
