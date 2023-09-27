@@ -18,7 +18,7 @@ export default function Navbar() {
     return (
         <nav class="navbar">
             {/* Logo-Link mit beschreibendem Label und alternativem Text */}
-            <A href="/">
+            <A href="/" aria-label="Go to home screen">
                 <img alt="Logo of the website all-countries" src="./logo.png"/>
             </A>
             <ul>
